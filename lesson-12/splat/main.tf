@@ -17,9 +17,24 @@ resource "aws_instance" "splat_lab" {
   ami           = "ami-0c7c4e3c6b4941f0f"
   instance_type = "t2.micro"
 
-  # Add your block devices here!
-  
+  root_block_device {
+    volume_size = 16
+    volume_type = "gp2"
+  }
+
+  ebs_block_device {
+    device_name = "/dev/xvdb"
+    volume_size = 16
+    volume_type = "gp2"
+  }
+
   tags = {
     Name = "Splat-Lab"
   }
+}
+
+
+resource "aws_iam_user" "test_users" {
+  count = 3
+  name  = "tractor-user.${count.index}"
 }

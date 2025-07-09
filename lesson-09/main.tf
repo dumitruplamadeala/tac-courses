@@ -15,7 +15,7 @@ provider "aws" {
 
 # Watch for an error in here! TROUBLESHOOT!
 resource "aws_iam_user" "user_1" {
-  name = User-1
+  name = "User-1"
   tags = {
     Troubleshooting = "YES"
   }

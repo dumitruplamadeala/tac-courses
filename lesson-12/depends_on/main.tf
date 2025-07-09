@@ -29,7 +29,7 @@ resource "aws_iam_user" "accounts_3" {
   # Add a depends_on meta-argument here and set the dependent resource as the instance.
   # This will force Terraform to wait until the instance is fully build before applying the users.
   
-
+depends_on = [ aws_instance.computer_1 ]
 
 }
 

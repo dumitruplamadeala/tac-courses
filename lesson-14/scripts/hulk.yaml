@@ -15,7 +15,7 @@ users:
     lock_passwd: false
     ssh_authorized_keys:
     # Enter your key here:
-      - ssh-rsa AAAA....
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA/pO/cKykH0WJz7PipoMpIo2T7cdO/Y9gflz5wvtz0j nono@thermoynd
 
 runcmd:
   - touch /home/hulk/hello.txt

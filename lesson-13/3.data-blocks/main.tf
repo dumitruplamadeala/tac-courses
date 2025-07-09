@@ -18,11 +18,11 @@ provider "aws" {
 
 data "aws_ami" "ubuntu" {
   most_recent = true
-  owners = ["543428934710"] # Canonical
+  owners      = ["099720109477"] # Canonical
 }
 
 resource "aws_instance" "data_block_instance" {
-  ami = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
 }
 

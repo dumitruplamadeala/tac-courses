@@ -2,8 +2,8 @@
 terraform {
   backend "s3" {
     # Enter the bucket name you chose previously as well as a bucket key.
-    bucket = ""
-    key = ""
+    bucket = "tac-testing-s3-bucket-course-909"
+    key = "dir1/terraform.tfstate"
     region = "us-east-2"
   }
   

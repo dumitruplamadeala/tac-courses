@@ -1,23 +1,21 @@
-resource "aws_instance" "lesson_06" {
+resource "aws_instance" "lesson_05" {
   ami           = "ami-097a2df4ac947655f"
   instance_type = "t2.micro"
   key_name      = "aws_key"
   vpc_security_group_ids = [
-    aws_security_group.sg_ssh.id,
+    aws_security_group.sg_http.id,
     aws_security_group.sg_https.id,
-    aws_security_group.sg_http.id
+    aws_security_group.sg_ssh.id
   ]
-  
-  
 
   tags = {
-    Name                  = "Lesson_06-Cloud-Init"    
+    "Name" = "Lesson_borica_05"
   }
 }
 
 resource "aws_key_pair" "deployer" {
   key_name   = "aws_key"
-  public_key = "ssh-ed25519 AAAA-etc..."
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3XcPq4SYwAllzBWzkRv7/3eU9bFBiEJ2EXjfXJEsxB nono@thermoynd"
 }
 
 resource "aws_security_group" "sg_ssh" {

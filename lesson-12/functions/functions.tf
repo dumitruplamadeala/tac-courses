@@ -14,3 +14,21 @@ provider "aws" {
 }
 
 # Add IAM user resource here and use functions!
+resource "aws_iam_user" "TEST_USER" {
+  name  = "user-${count.index}"
+  count = 3
+  tags = {
+    time_Created = timestamp()
+    department   = "OPERATIONS"
+  }
+}
+
+resource "random_string" "suffix" {
+  length  = 6
+  upper   = false
+  special = false
+}
+
+resource "aws_iam_user" "example" {
+  name = "user-${random_string.suffix.result}"
+}

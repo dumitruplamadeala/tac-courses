@@ -1,30 +1,34 @@
 ## PUT TERRAFORM CLOUD BLOCK HERE!  ##
 
 terraform {
-  
-  
-  
+  cloud {
+
+    organization = "terradell_startup_learn"
+
+    workspaces {
+      name = "terradell_learn_workspace"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.01"
     }
   }
-
-
-
 }
 
 
 # Variable blocks directly within the main.tf. No arguments necessary.
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+# variable "aws_access_key" {}
+# variable "aws_secret_key" {}
+variable "region" {}
 
 # provider arguments call on the variables which then call on terraform.tfvars for the values.
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-  region     = "us-east-2"
+  # access_key = var.aws_access_key
+  # secret_key = var.aws_secret_key
+  region = var.region
 }
 
 # Add .gitignore file in this directory with the terraform.tfvars

@@ -1,0 +1,11 @@
+variable "instance_name" {
+  description = "Name tag of the instance"
+  type        = string
+  default     = "Lesson-07-GRISA!!!"
+}
+
+variable "ami_system_version" {
+  description = "This var will be responsible of keeping the AMI"
+  type        = string
+  default     = "ami-0c7c4e3c6b4941f0f"
+}

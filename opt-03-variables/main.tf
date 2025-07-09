@@ -18,7 +18,7 @@ resource "aws_instance" "opt_03" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = var.name
+    Name     = var.name
     Category = var.category
   }
 }

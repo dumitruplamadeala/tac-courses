@@ -1,3 +1,26 @@
+# VSCode
 .vscode/
+
+# Shell scripts (optional, if personal only)
 .git-push.sh
 
+# Terraform state and provider cache
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+
+# Logs and temporary files
+**/*.log
+
+# Terraform output/graph visuals
+**/graph*
+**/output*.svg
+
+# SSH and cloud keys
+**/keys/
+**/ssh_key
+**/ssh_key.pub
+
+# Optional: ignore tfvars if sensitive
+**/terraform.tfvars
