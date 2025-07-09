@@ -24,3 +24,8 @@
 
 # Optional: ignore tfvars if sensitive
 **/terraform.tfvars
+
+*.pem
+*.key
+*.priv
+.ssh/
