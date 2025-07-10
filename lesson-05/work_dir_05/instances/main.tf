@@ -15,7 +15,7 @@ resource "aws_instance" "lesson_05" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "aws_key"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3XcPq4SYwAllzBWzkRv7/3eU9bFBiEJ2EXjfXJEsxB nono@thermoynd"
+  public_key = "ssh-ed25519 AAAA... your_public_key_here"
 }
 
 resource "aws_security_group" "sg_ssh" {
